@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>loc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            min-height: 90vh;
+            padding: 80px 30px;
+            background-color: #3a4c53;
+        }
+
+        .section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .top-header h1 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        .location-container {
+            padding: 20px;
+        }
+
+        .location-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+
+        .location-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .location-value {
+            font-size: 1.1em;
+            color: #212529;
+        }
+
+        .get-location-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+
+        .get-location-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #location {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-logo">
+        <p class="nav-name">Zartt</p>
+        <span>.</span>
+    </div>
+    <ul class="nav-menu" id="myNavMenu">
+        <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="tutorial.html" class="nav-link active-link">Tutorial</a></li>
+        <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-button">
+        <button class="btn">
+          <a href="assets/cv/CV-HAFID_HANIZAR_RAMZI.pdf" download="CV-HAFID_HANIZAR_RAMZI.pdf" class="download-btn">Download CV</a><i class="uil uil-file-alt"></i>
+        </button>
+      </div>
+    <div class="nav-menu-btn">
+        <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+    </div>
+  </nav>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top-header">
+                <h1>Get Location</h1>
+            </div>
+            
+            <div class="location-container">
+                <button class="get-location-btn" onclick="getLocation()">Get My Location</button>
+                
+                <div id="location">
+                    <div class="location-group">
+                        <span class="location-label">Latitude:</span>
+                        <span class="location-value" id="latitude">-</span>
+                    </div>
+                    
+                    <div class="location-group">
+                        <span class="location-label">Longitude:</span>
+                        <span class="location-value" id="longitude">-</span>
+                    </div>
+                    
+                    <div class="location-group">
+                        <span class="location-label">Accuracy:</span>
+                        <span class="location-value" id="accuracy">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="top-footer">
+          <p>Hafid Hanizar Ramzi</p>
+      </div>
+      
+      <div class="middle-footer">
+          <ul class="footer-menu">
+              <li class="footer_menu_list"><a href="index.html#home">Home</a></li>
+              <li class="footer_menu_list"><a href="index.html#about">About</a></li>
+              <li class="footer_menu_list"><a href="index.html#projects">Projects</a></li>
+              <li class="footer_menu_list"><a href="tutorial.html">Tutorial</a></li>
+              <li class="footer_menu_list"><a href="index.html#contact">Contact</a></li>
+              <li class="footer_menu_list"><a href="#">loc API</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-social-icons">
+          <a href="https://www.instagram.com/hafidramzi01/" target="_blank" rel="noopener noreferrer">
+            <div class="icon"><i class="uil uil-instagram"></i></div>
+          </a>
+          <a href="https://www.linkedin.com/in/hafid-ramzi-7711b1300/" target="_blank" rel="noopener noreferrer">
+            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+          </a>
+          <a href="https://dribbble.com/Zartt" target="_blank" rel="noopener noreferrer">
+            <div class="icon"><i class="uil uil-dribbble"></i></div>
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <div class="icon"><i class="uil uil-github-alt"></i></div>
+          </a>
+        </div>
+
+      <div class="bottom-footer">
+          <p>Copyright © <a href="#home" style="text-decoration: none;">Zartt</a> - All rights reserved</p>
+      </div>
+  </footer>
+
+     <!-- ----- TYPING JS Link ----- -->
+     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+     <!-- ----- SCROLL REVEAL JS Link----- -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+ 
+     <!-- ----- MAIN JS ----- -->
+     <script src="assets/js/main.js"></script>
+
+  <script src="main.js"></script>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("latitude").textContent = position.coords.latitude;
+            document.getElementById("longitude").textContent = position.coords.longitude;
+            document.getElementById("accuracy").textContent = Math.round(position.coords.accuracy) + " meters";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>form</title>
+    <style>
+        .form-container {
+            background: var(--color-white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-container h2 {
+            color: var(--first-color);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-color-secnd);
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background-color: var(--first-color);
+            color: var(--color-white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: var(--first-color-hover);
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <p class="nav-name">Zartt</p>
+            <span>.</span>
+        </div>
+        <ul class="nav-menu" id="myNavMenu">
+            <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="tutorial.html" class="nav-link active-link">Tutorial</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-button">
+            <button class="btn">
+              <a href="assets/cv/CV-HAFID_HANIZAR_RAMZI.pdf" download="CV-HAFID_HANIZAR_RAMZI.pdf" class="download-btn">Download CV</a><i class="uil uil-file-alt"></i>
+            </button>
+          </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="section" id="register">
+            <div class="top-header">
+                <h1>Registration Form</h1>
+            </div>
+            <div class="form-container">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">None</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Register</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="top-footer">
+            <p>Hafid Hanizar Ramzi</p>
+        </div>
+        
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list"><a href="index.html#home">Home</a></li>
+                <li class="footer_menu_list"><a href="index.html#about">About</a></li>
+                <li class="footer_menu_list"><a href="index.html#projects">Projects</a></li>
+                <li class="footer_menu_list"><a href="index.html#Tutorial">Tutorial</a></li>
+                <li class="footer_menu_list"><a href="index.html#contact">Contact</a></li>
+                <li class="footer_menu_list"><a href="#">Login</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/hafidramzi01/" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-instagram"></i></div>
+            </a>
+            <a href="https://www.linkedin.com/in/hafid-ramzi-7711b1300/" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+            </a>
+            <a href="https://dribbble.com/Zartt" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-dribbble"></i></div>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-github-alt"></i></div>
+            </a>
+          </div>
+
+        <div class="bottom-footer">
+            <p>Copyright © <a href="#home" style="text-decoration: none;">Zartt</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+       <!-- ----- TYPING JS Link ----- -->
+       <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+       <script src="https://unpkg.com/scrollreveal"></script>
+   
+       <!-- ----- MAIN JS ----- -->
+       <script src="assets/js/main.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>

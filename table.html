@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Tabel</title>
+    <style>
+        .table-container {
+            background: var(--color-white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            white-space: nowrap;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: var(--first-color);
+            color: var(--color-white);
+            position: sticky;
+            top: 0;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .ipk-cell {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <p class="nav-name">Zartt</p>
+            <span>.</span>
+        </div>
+        <ul class="nav-menu" id="myNavMenu">
+            <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+            <li class="nav-item"><a href="tutorial.html" class="nav-link active-link">Tutorial</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-button">
+            <button class="btn">
+              <a href="assets/cv/CV-HAFID_HANIZAR_RAMZI.pdf" download="CV-HAFID_HANIZAR_RAMZI.pdf" class="download-btn">Download CV</a><i class="uil uil-file-alt"></i>
+            </button>
+          </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <main class="wrapper">
+        <section class="section" id="data-mahasiswa">
+            <div class="top-header">
+                <h1>Data Mahasiswa</h1>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>IPK Sem 1</th>
+                            <th>IPK Sem 2</th>
+                            <th>IPK Sem 3</th>
+                            <th>IPK Sem 4</th>
+                            <th>IPK Sem 5</th>
+                            <th>IPK Sem 6</th>
+                            <th>IPK Sem 7</th>
+                            <th>IPK Sem 8</th>
+                            <th>Jurusan</th>
+                            <th>Fakultas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2020001</td>
+                            <td>Ahmad Fauzi</td>
+                            <td class="ipk-cell">3.54</td>
+                            <td class="ipk-cell">3.62</td>
+                            <td class="ipk-cell">3.70</td>
+                            <td class="ipk-cell">3.75</td>
+                            <td class="ipk-cell">3.80</td>
+                            <td class="ipk-cell">3.85</td>
+                            <td class="ipk-cell">3.90</td>
+                            <td class="ipk-cell">3.92</td>
+                            <td>Teknik Informatika</td>
+                            <td>Fakultas Teknik</td>
+                        </tr>
+                        <tr>
+                            <td>2020002</td>
+                            <td>Siti Aisyah</td>
+                            <td class="ipk-cell">3.60</td>
+                            <td class="ipk-cell">3.65</td>
+                            <td class="ipk-cell">3.70</td>
+                            <td class="ipk-cell">3.72</td>
+                            <td class="ipk-cell">3.75</td>
+                            <td class="ipk-cell">3.78</td>
+                            <td class="ipk-cell">3.80</td>
+                            <td class="ipk-cell">3.85</td>
+                            <td>Manajemen</td>
+                            <td>Fakultas Ekonomi dan Bisnis</td>
+                        </tr>
+                        <tr>
+                            <td>2020003</td>
+                            <td>Budi Santoso</td>
+                            <td class="ipk-cell">3.40</td>
+                            <td class="ipk-cell">3.45</td>
+                            <td class="ipk-cell">3.50</td>
+                            <td class="ipk-cell">3.55</td>
+                            <td class="ipk-cell">3.60</td>
+                            <td class="ipk-cell">3.65</td>
+                            <td class="ipk-cell">3.70</td>
+                            <td class="ipk-cell">3.75</td>
+                            <td>Teknik Sipil</td>
+                            <td>Fakultas Teknik</td>
+                        </tr>
+                        <tr>
+                            <td>2020004</td>
+                            <td>Dewi Lestari</td>
+                            <td class="ipk-cell">3.75</td>
+                            <td class="ipk-cell">3.80</td>
+                            <td class="ipk-cell">3.85</td>
+                            <td class="ipk-cell">3.90</td>
+                            <td class="ipk-cell">3.92</td>
+                            <td class="ipk-cell">3.95</td>
+                            <td class="ipk-cell">3.97</td>
+                            <td class="ipk-cell">4.00</td>
+                            <td>Kedokteran</td>
+                            <td>Fakultas Kedokteran</td>
+                        </tr>
+                        <tr>
+                            <td>2020005</td>
+                            <td>Muhammad Rizki</td>
+                            <td class="ipk-cell">3.30</td>
+                            <td class="ipk-cell">3.35</td>
+                            <td class="ipk-cell">3.40</td>
+                            <td class="ipk-cell">3.45</td>
+                            <td class="ipk-cell">3.50</td>
+                            <td class="ipk-cell">3.55</td>
+                            <td class="ipk-cell">3.60</td>
+                            <td class="ipk-cell">3.65</td>
+                            <td>Akuntansi</td>
+                            <td>Fakultas Ekonomi dan Bisnis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="top-footer">
+            <p>Hafid Hanizar Ramzi</p>
+        </div>
+        
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list"><a href="index.html#home">Home</a></li>
+                <li class="footer_menu_list"><a href="index.html#about">About</a></li>
+                <li class="footer_menu_list"><a href="index.html#projects">Projects</a></li>
+                <li class="footer_menu_list"><a href="tutorial.html">Tutorial</a></li>
+                <li class="footer_menu_list"><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/hafidramzi01/" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-instagram"></i></div>
+            </a>
+            <a href="https://www.linkedin.com/in/hafid-ramzi-7711b1300/" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+            </a>
+            <a href="https://dribbble.com/Zartt" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-dribbble"></i></div>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><i class="uil uil-github-alt"></i></div>
+            </a>
+          </div>
+
+        <div class="bottom-footer">
+            <p>Copyright © <a href="#home" style="text-decoration: none;">Zartt</a> - All rights reserved</p>
+        </div>
+    </footer>
+
+       <!-- ----- TYPING JS Link ----- -->
+       <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+       <script src="https://unpkg.com/scrollreveal"></script>
+   
+       <!-- ----- MAIN JS ----- -->
+       <script src="assets/js/main.js"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>

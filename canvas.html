@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- --------- UNICONS ---------- -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+
+    <title>Zartt - Canvas</title>
+    <style>
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+  
+      .wrapper {
+        min-height: 15vh;
+        padding: 20px 24px;
+        background: #3a4c53;
+      }
+  
+      /* Canvas Section Styling */
+      .canvas-section {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 32px;
+      }
+  
+      .section-title {
+        text-align: center;
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 24px;
+        font-weight: 600;
+      }
+  
+      /* Canvas Container */
+      .canvas-container {
+        width: 100%;
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+  
+      canvas {
+        width: 100%;
+        height: 400px;
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+      }
+  
+      /* Controls Styling */
+      .canvas-controls {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        justify-content: center;
+      }
+  
+      .canvas-controls button {
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+      }
+  
+      .canvas-controls button:hover {
+        background: #0056b3;
+      }
+      ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Zartt</p>
+          <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <ul class="nav-menu" id="myNavMenu">
+              <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="index.html#projects" class="nav-link">Projects</a></li>
+              <li class="nav-item"><a href="tutorial.html" class="nav-link active-link">Tutorial</a></li>
+              <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+          </ul>
+        </div>
+        <div class="nav-button">
+          <button class="btn">
+            <a href="assets/cv/CV-HAFID_HANIZAR_RAMZI.pdf" download="CV-HAFID_HANIZAR_RAMZI.pdf" class="download-btn">Download CV</a><i class="uil uil-file-alt"></i>
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+      <main class="wrapper"></main>
+
+        <section class="canvas-section">
+            <h1 class="section-title">Canvas Playground</h1>
+            
+            <div class="canvas-container">
+                <div class="canvas-controls">
+                    <input type="file" id="imageInput" accept="image/*" class="file-input">
+                    <button class="btn" id="clearBtn">Clear Canvas</button>
+                    <button class="btn" id="downloadBtn">Download Image</button>
+                </div>
+                <canvas id="canvas" width="600" height="400"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <!-- --------------- FOOTER --------------- -->
+    <footer>
+      <div class="top-footer">
+        <p>Hafid Hanizar Ramzi</p>
+      </div>
+      <div class="middle-footer">
+        <ul class="footer-menu">
+        <li class="footer_menu_list">
+          <a href="index.html#home">Home</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="index.html#about">About</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="index.html#projects">Projects</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="tutorial.html">Tutorial</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="index.html#contact">Contact</a>
+        </li>
+        <li class="footer_menu_list">
+          <a href="#">canvas</a>
+        </li>
+      </ul>
+      </div>
+      <div class="footer-social-icons">
+        <a href="https://www.instagram.com/hafidramzi01/" target="_blank" rel="noopener noreferrer">
+          <div class="icon"><i class="uil uil-instagram"></i></div>
+        </a>
+        <a href="https://www.linkedin.com/in/hafid-ramzi-7711b1300/" target="_blank" rel="noopener noreferrer">
+          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+        </a>
+        <a href="https://dribbble.com/Zartt" target="_blank" rel="noopener noreferrer">
+          <div class="icon"><i class="uil uil-dribbble"></i></div>
+        </a>
+        <a href="https://github.com/maen-nizar" target="_blank" rel="noopener noreferrer">
+          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </a>
+      </div>
+      <div class="bottom-footer">
+        <p>
+          Copyright &copy;
+          <a href="#home" style="text-decoration: none">Zartt</a> - All
+          rights reserved
+        </p>
+      </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const imageInput = document.getElementById('imageInput');
+        const clearBtn = document.getElementById('clearBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        // Clear canvas with white background
+        function clearCanvas() {
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        // Initial clear
+        clearCanvas();
+
+        // Handle image upload
+        imageInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const img = new Image();
+                    img.onload = function() {
+                        // Calculate scaling to fit canvas while maintaining aspect ratio
+                        const scale = Math.min(
+                            canvas.width / img.width,
+                            canvas.height / img.height
+                        );
+                        const x = (canvas.width - img.width * scale) / 2;
+                        const y = (canvas.height - img.height * scale) / 2;
+
+                        clearCanvas();
+                        ctx.drawImage(img, x, y, img.width * scale, img.height * scale);
+                    };
+                    img.src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Clear canvas button
+        clearBtn.addEventListener('click', clearCanvas);
+
+        // Download canvas as image
+        downloadBtn.addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.download = 'canvas-image.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        });
+    </script>
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ----- MAIN JS ----- -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function downloadCV() {
+          // Implementasi fungsi download CV
+          alert('Download CV functionality to be implemented');
+      }
+
+      function hireMe() {
+          // Implementasi fungsi hire me
+          window.location.href = '#contact';
+      }
+  </script> 
+</body>
+</html>
